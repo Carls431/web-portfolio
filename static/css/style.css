@@ -558,6 +558,54 @@ section {
     box-shadow: var(--shadow-md);
 }
 
+.live-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: var(--transition);
+    margin-left: 0.5rem;
+}
+
+.live-link:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+    background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+}
+
+.demo-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: linear-gradient(135deg, #ff6b6b, #ee5a24);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: var(--transition);
+    margin-left: 0.5rem;
+    border: 2px solid transparent;
+}
+
+.demo-link:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+    background: linear-gradient(135deg, #ee5a24, #ff6b6b);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.demo-link i {
+    font-size: 1rem;
+}
+
 /* Experience Section */
 .timeline {
     position: relative;

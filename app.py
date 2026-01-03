@@ -18,7 +18,8 @@ def get_projects():
             'year': '2022-2023',
             'company': 'MOIST',
             'image': '5d1c1098-a111-4472-8c71-827584a64b2a.jfif',
-            'github_link': 'https://github.com/Carls431/Faculty-Evaluation'
+            'github_link': 'https://github.com/Carls431/Faculty-Evaluation',
+            'demo_video': 'https://drive.google.com/file/d/1hqeQ5Ta0yXfBbZh2-0kX4-Ep5TqOEwUa/view?usp=drive_link'
         },
         {
             'id': 2,
@@ -39,7 +40,20 @@ def get_projects():
             'year': '2023-2024',
             'company': 'Personal Project',
             'image': 'Screenshot 2026-01-03 150657.png',
-            'github_link': ''
+            'github_link': '',
+            'demo_video': 'https://drive.google.com/file/d/1cisxRi_GiIbZnL-cxxjIDgO98VBNOiMx/view?usp=drive_link'
+        },
+        {
+            'id': 4,
+            'title': 'Cleaning Service Website',
+            'category': 'Live Website',
+            'description': 'Developed and deployed a professional cleaning service website with live hosting. Features include service listings, booking system, contact forms, and responsive design for optimal user experience.',
+            'technologies': ['Python', 'Flask', 'JavaScript', 'HTML/CSS', 'Responsive Design', 'Live Hosting'],
+            'year': '2024',
+            'company': 'Live Project',
+            'image': 'wala.png',
+            'github_link': 'https://github.com/Carls431/cleaning-service-website/tree/main/.windsurf/cleaning-web',
+            'live_link': 'https://carls.pythonanywhere.com/'
         }
     ]
     return jsonify(projects)
@@ -47,7 +61,7 @@ def get_projects():
 @app.route('/api/skills')
 def get_skills():
     skills = {
-        'technical': ['PHP', 'MySQL', 'HTML/CSS', 'JavaScript', 'UI/UX Design (Figma)', 'Bootstrap', 'AJAX', 'Google Ads', 'Landing Page Optimization', 'VSL Page Development', 'HTML Structure Modification'],
+        'technical': ['PHP', 'MySQL', 'HTML/CSS', 'JavaScript', 'UI/UX Design (Figma)', 'Bootstrap', 'AJAX', 'Google Ads', 'Landing Page Optimization', 'VSL Page Development', 'HTML Structure Modification', 'Python', 'Flask'],
         'soft': ['Time Management', 'Adaptability', 'Creativity', 'Critical Thinking']
     }
     return jsonify(skills)

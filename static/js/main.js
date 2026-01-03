@@ -97,12 +97,26 @@ async function loadProjects() {
                     <div class="work-tech">
                         ${project.technologies.map(tech => `<span class="tech-tag">${tech}</span>`).join('')}
                     </div>
-                    ${project.github_link ? `
+                    ${project.github_link || project.live_link || project.demo_video ? `
                     <div class="work-links">
+                        ${project.github_link ? `
                         <a href="${project.github_link}" target="_blank" class="github-link">
                             <i class="fab fa-github"></i>
                             View on GitHub
                         </a>
+                        ` : ''}
+                        ${project.live_link ? `
+                        <a href="${project.live_link}" target="_blank" class="live-link">
+                            <i class="fas fa-external-link-alt"></i>
+                            View Live Site
+                        </a>
+                        ` : ''}
+                        ${project.demo_video ? `
+                        <a href="${project.demo_video}" target="_blank" class="demo-link">
+                            <i class="fas fa-play-circle"></i>
+                            Watch Demo
+                        </a>
+                        ` : ''}
                     </div>
                     ` : ''}
                 </div>
@@ -110,6 +124,28 @@ async function loadProjects() {
         `).join('');
     } catch (error) {
         console.error('Error loading projects:', error);
+    }
+}
+
+// Load Skills Dynamically
+async function loadSkills() {
+    try {
+        const response = await fetch('/api/skills');
+        const skills = await response.json();
+        const technicalSkillsList = document.getElementById('technical-skills-list');
+        const softSkillsList = document.getElementById('soft-skills-list');
+        
+        // Load technical skills
+        technicalSkillsList.innerHTML = skills.technical.map((skill, index) => `
+            <span class="skill-tag" data-aos="bounce-in" data-aos-duration="600" data-aos-delay="${600 + index * 100}">${skill}</span>
+        `).join('');
+        
+        // Load soft skills
+        softSkillsList.innerHTML = skills.soft.map((skill, index) => `
+            <span class="skill-tag" data-aos="bounce-in" data-aos-duration="600" data-aos-delay="${800 + index * 100}">${skill}</span>
+        `).join('');
+    } catch (error) {
+        console.error('Error loading skills:', error);
     }
 }
 
@@ -209,6 +245,7 @@ const observer = new IntersectionObserver((entries) => {
 document.addEventListener('DOMContentLoaded', () => {
     // Load dynamic content
     loadProjects();
+    loadSkills();
     loadExperience();
     
     // Observe skill tags for animation
