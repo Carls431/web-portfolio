@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carl Cabrera - Web Developer & Designer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="#home">CARL - WEB DEV</a>
+            </div>
+            <div class="nav-menu">
+                <a href="#home" class="nav-link">INTRO</a>
+                <a href="#about" class="nav-link">ABOUT</a>
+                <a href="#skills" class="nav-link">SKILLS</a>
+                <a href="#works" class="nav-link">WORKS</a>
+                <a href="#contact" class="nav-link">SAY HELLO</a>
+                <button class="theme-toggle" id="theme-toggle">
+                    <i class="fas fa-moon" id="theme-icon"></i>
+                </button>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title" data-aos="fade-up">
+                Hi, I'm <span class="highlight">Carl Cabrera</span>
+            </h1>
+            <h2 class="hero-subtitle" data-aos="fade-up" data-aos-delay="100">
+                VSL & Landing Page Developer | Web Developer
+            </h2>
+            <p class="hero-description" data-aos="fade-up" data-aos-delay="200">
+                Specialized in creating high-converting landing pages and VSL (Video Sales Letter) pages for Google Ads campaigns. 
+                Expert in HTML structure modification to optimize ad performance and ensure compliance. 
+                Proficient in PHP and MySQL for backend development, with solid full-stack skills in building user-friendly systems and scalable solutions.
+            </p>
+            <div class="hero-buttons" data-aos="fade-up" data-aos-delay="300">
+                <a href="#works" class="btn btn-primary">View My Work</a>
+                <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+            </div>
+        </div>
+        <div class="hero-scroll" data-aos="fade-up" data-aos-delay="400">
+            <div class="scroll-indicator">
+                <span></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-down" data-aos-duration="1000">ABOUT ME</h2>
+            <div class="about-content">
+                <div class="about-text" data-aos="fade-right" data-aos-duration="1200" data-aos-delay="200">
+                    <p data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
+                        I'm a passionate VSL & Landing Page Developer with a Bachelor of Science in Information Technology (2020-2024). 
+                        I specialize in creating high-converting landing pages and VSL pages for Google Ads campaigns, with expertise in HTML structure modification to optimize performance.
+                    </p>
+                    <p data-aos="fade-up" data-aos-duration="800" data-aos-delay="600">
+                        Currently working as a Landing Page/VSL Page Adjuster for digital marketing campaigns, I have hands-on experience developing various systems including inventory management and evaluation systems. 
+                        I'm a strong team player who delivers high-quality work with attention to detail and user experience.
+                    </p>
+                    <div class="about-info" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="800">
+                        <div class="info-item" data-aos="slide-left" data-aos-duration="600" data-aos-delay="1000">
+                            <i class="fas fa-envelope"></i>
+                            <span>carlcabrera090@gmail.com</span>
+                        </div>
+                        <div class="info-item" data-aos="slide-left" data-aos-duration="600" data-aos-delay="1200">
+                            <i class="fas fa-phone"></i>
+                            <span>+63-916-9035405</span>
+                        </div>
+                        <div class="info-item" data-aos="slide-left" data-aos-duration="600" data-aos-delay="1400">
+                            <i class="fas fa-graduation-cap"></i>
+                            <span>BS in Information Technology</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image" data-aos="fade-left" data-aos-duration="1200" data-aos-delay="600">
+                    <div class="profile-image" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="1000">
+                        <img src="{{ url_for('static', filename='images/IMG_20240213_122358-removebg-preview.png') }}" alt="Carl Cabrera" class="profile-img">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title" data-aos="flip-left" data-aos-duration="1000">SKILLS</h2>
+            <div class="skills-grid">
+                <div class="skills-category" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="200">
+                    <h3 data-aos="zoom-in" data-aos-duration="800" data-aos-delay="400">Technical Skills</h3>
+                    <div class="skills-list">
+                        <span class="skill-tag" data-aos="bounce-in" data-aos-duration="600" data-aos-delay="600">PHP</span>
+                        <span class="skill-tag" data-aos="bounce-in" data-aos-duration="600" data-aos-delay="700">MySQL</span>
+                        <span class="skill-tag" data-aos="bounce-in" data-aos-duration="600" data-aos-delay="800">HTML/CSS</span>
+                        <span class="skill-tag" data-aos="bounce-in" data-aos-duration="600" data-aos-delay="900">JavaScript</span>
+                        <span class="skill-tag" data-aos="bounce-in" data-aos-duration="600" data-aos-delay="1000">UI/UX Design (Figma)</span>
+                        <span class="skill-tag" data-aos="bounce-in" data-aos-duration="600" data-aos-delay="1100">Bootstrap</span>
+                        <span class="skill-tag" data-aos="bounce-in" data-aos-duration="600" data-aos-delay="1200">AJAX</span>
+                        <span class="skill-tag" data-aos="bounce-in" data-aos-duration="600" data-aos-delay="1300">Google Ads</span>
+                        <span class="skill-tag" data-aos="bounce-in" data-aos-duration="600" data-aos-delay="1400">Landing Page Optimization</span>
+                        <span class="skill-tag" data-aos="bounce-in" data-aos-duration="600" data-aos-delay="1500">VSL Page Development</span>
+                        <span class="skill-tag" data-aos="bounce-in" data-aos-duration="600" data-aos-delay="1600">HTML Structure Modification</span>
+                    </div>
+                </div>
+                <div class="skills-category" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="400">
+                    <h3 data-aos="zoom-in" data-aos-duration="800" data-aos-delay="600">Soft Skills</h3>
+                    <div class="skills-list">
+                        <span class="skill-tag" data-aos="bounce-in" data-aos-duration="600" data-aos-delay="800">Time Management</span>
+                        <span class="skill-tag" data-aos="bounce-in" data-aos-duration="600" data-aos-delay="900">Adaptability</span>
+                        <span class="skill-tag" data-aos="bounce-in" data-aos-duration="600" data-aos-delay="1000">Creativity</span>
+                        <span class="skill-tag" data-aos="bounce-in" data-aos-duration="600" data-aos-delay="1100">Critical Thinking</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Works Section -->
+    <section id="works" class="works">
+        <div class="container">
+            <h2 class="section-title" data-aos="zoom-out" data-aos-duration="1000">RECENT WORKS</h2>
+            <p class="section-subtitle" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+                Here are some of my favorite projects I have done lately. Feel free to check them out.
+            </p>
+            <div class="works-grid" id="works-grid">
+                <!-- Projects will be loaded dynamically -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <h2 class="section-title" data-aos="slide-right" data-aos-duration="1000">EXPERIENCE</h2>
+            <div class="timeline" id="timeline">
+                <!-- Experience will be loaded dynamically -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-down" data-aos-duration="1000">SAY HELLO</h2>
+            <div class="contact-content">
+                <div class="contact-info" data-aos="fade-right" data-aos-duration="1200" data-aos-delay="200">
+                    <h3 data-aos="zoom-in" data-aos-duration="800" data-aos-delay="400">Let's Connect</h3>
+                    <p data-aos="fade-up" data-aos-duration="600" data-aos-delay="600">I'm always interested in hearing about new projects and opportunities.</p>
+                    <div class="contact-details">
+                        <div class="contact-item" data-aos="slide-left" data-aos-duration="600" data-aos-delay="800">
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:carlcabrera090@gmail.com">carlcabrera090@gmail.com</a>
+                        </div>
+                        <div class="contact-item" data-aos="slide-left" data-aos-duration="600" data-aos-delay="900">
+                            <i class="fas fa-phone"></i>
+                            <a href="tel:+639169035405">+63-916-9035405</a>
+                        </div>
+                    </div>
+                    <div class="social-links" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="1000">
+                        <a href="#" class="social-link" data-aos="flip-up" data-aos-duration="600" data-aos-delay="1200"><i class="fab fa-telegram"></i></a>
+                        <a href="#" class="social-link" data-aos="flip-up" data-aos-duration="600" data-aos-delay="1300"><i class="fab fa-github"></i></a>
+                        <a href="#" class="social-link" data-aos="flip-up" data-aos-duration="600" data-aos-delay="1400"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="contact-form" data-aos="fade-left" data-aos-duration="1200" data-aos-delay="400">
+                    <form id="contact-form">
+                        <div class="form-group" data-aos="fade-up" data-aos-duration="600" data-aos-delay="600">
+                            <input type="text" id="name" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group" data-aos="fade-up" data-aos-duration="600" data-aos-delay="700">
+                            <input type="email" id="email" name="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group" data-aos="fade-up" data-aos-duration="600" data-aos-delay="800">
+                            <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="900">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Carl Cabrera. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
