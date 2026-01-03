@@ -1,11 +1,9 @@
-from flask import Flask, render_template, jsonify
-import json
-import os
+from flask import Flask, jsonify, render_template
 
-app = Flask(__name__)
+app = Flask(__name__, template_folder='templates', static_folder='static')
 
 @app.route('/')
-def home():
+def index():
     return render_template('index.html')
 
 @app.route('/api/projects')
