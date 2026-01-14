@@ -392,9 +392,9 @@ document.addEventListener('DOMContentLoaded', () => {
             modalContent.innerHTML = `
                 <h2 style="margin-bottom: 1rem; color: var(--text-primary);">My Resume</h2>
                 <div style="width: 95%; max-width: 1100px; height: 75vh; margin-bottom: 2rem; border: 1px solid #ddd; border-radius: 8px; overflow: hidden;">
-                    <iframe src="/static/resume/Professional Minimalist CV Resume.pdf" width="100%" height="100%" style="border: none;">
+                    <iframe src="/resume/Professional Minimalist CV Resume.pdf" width="100%" height="100%" style="border: none;">
                         <p>Your browser does not support PDFs. 
-                        <a href="/static/resume/Professional Minimalist CV Resume.pdf" download="Carl_Cabrera_Resume.pdf">Download resume</a> instead.</p>
+                        <a href="/resume/Professional Minimalist CV Resume.pdf" download="Carl_Cabrera_Resume.pdf">Download resume</a> instead.</p>
                     </iframe>
                 </div>
                 <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
@@ -448,7 +448,7 @@ document.addEventListener('DOMContentLoaded', () => {
             document.getElementById('download-resume').addEventListener('click', () => {
                 // Try to download the new resume file
                 const link = document.createElement('a');
-                link.href = '/static/resume/Professional Minimalist CV Resume.pdf';
+                link.href = '/resume/Professional Minimalist CV Resume.pdf';
                 link.download = 'Carl_Cabrera_Resume.pdf';
                 link.click();
                 
