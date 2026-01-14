@@ -65,8 +65,8 @@ def get_projects():
 @app.route('/api/skills')
 def get_skills():
     skills = {
-        'technical': ['PHP', 'MySQL', 'HTML/CSS', 'JavaScript', 'UI/UX Design (Figma)', 'Bootstrap', 'AJAX', 'Google Ads', 'Landing Page Optimization', 'VSL Page Development', 'HTML Structure Modification', 'Python', 'Flask'],
-        'soft': ['Time Management', 'Adaptability', 'Creativity', 'Critical Thinking']
+        'technical': ['PHP', 'MySQL', 'HTML/CSS', 'JavaScript', 'TypeScript', 'React JS', 'UI/UX Design (Figma)', 'Bootstrap', 'AJAX', 'Python', 'Flask', 'Google Ads', 'Landing Page Optimization', 'VSL Page Development', 'Database Design', 'API Development'],
+        'soft': ['Time Management', 'Adaptability', 'Creativity', 'Critical Thinking', 'Problem Solving', 'Team Collaboration']
     }
     return jsonify(skills)
 
@@ -74,10 +74,10 @@ def get_skills():
 def get_experience():
     experience = [
         {
-            'title': 'Landing Page/VSL Page Adjuster',
+            'title': 'VSL Developer & HTML Structure Specialist',
             'company': 'Digital Marketing Agency',
             'period': '2024 - Present',
-            'description': 'Specialized in adjusting landing pages and VSL (Video Sales Letter) pages for Google Ads campaigns. Responsible for modifying HTML structure and content for new accounts to avoid detection by Google AI, ensuring ad compliance and optimal performance.'
+            'description': 'VSL Developer and HTML Structure Specialist focused on creating high-converting landing pages and VSL pages for Google Ads campaigns. Expert in HTML structure modification to optimize ad performance, ensure compliance, and enable fast rendering for better ad delivery.'
         },
         {
             'title': 'System Developer',
