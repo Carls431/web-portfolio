@@ -1,6 +1,10 @@
-from flask import Flask, jsonify, render_template
+from flask import Flask, jsonify, render_template, send_from_directory
 
 app = Flask(__name__, template_folder='templates', static_folder='static')
+
+@app.route('/static/resume/<path:filename>')
+def serve_resume(filename):
+    return send_from_directory('static/resume', filename)
 
 @app.route('/')
 def index():
