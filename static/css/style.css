@@ -249,9 +249,12 @@ body {
 .btn-primary {
     background: var(--bg-primary);
     color: var(--primary-color);
+    border: 2px solid var(--primary-color);
 }
 
 .btn-primary:hover {
+    background: var(--primary-color);
+    color: var(--bg-primary);
     transform: translateY(-2px);
     box-shadow: var(--shadow-lg);
 }
@@ -357,14 +360,27 @@ section {
     width: 20px;
 }
 
+.about-buttons {
+    margin-top: 2.5rem;
+    text-align: left;
+    padding-top: 1rem;
+}
+
+.about-buttons .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
 .about-image {
     display: flex;
     justify-content: center;
+    align-items: flex-start; /* Align items to the top */
 }
 
 .profile-image {
-    width: 300px;
-    height: 300px;
+    width: 380px;
+    height: 380px;
     border-radius: 50%;
     overflow: hidden;
     border: 5px solid var(--primary-color);

@@ -347,3 +347,128 @@ window.addEventListener('load', () => {
 // Console welcome message
 console.log('%c👋 Welcome to Carl Cabrera\'s Portfolio!', 'color: #667eea; font-size: 20px; font-weight: bold;');
 console.log('%cBuilt with ❤️ using Flask, HTML, CSS, and JavaScript', 'color: #764ba2; font-size: 14px;');
+
+// Resume View Functionality
+document.addEventListener('DOMContentLoaded', () => {
+    const viewResumeBtn = document.getElementById('view-resume-btn');
+    
+    if (viewResumeBtn) {
+        viewResumeBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            
+            // Create modal overlay
+            const modalOverlay = document.createElement('div');
+            modalOverlay.style.cssText = `
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.8);
+                z-index: 10000;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                opacity: 0;
+                transition: opacity 0.3s ease;
+            `;
+            
+            // Create modal content
+            const modalContent = document.createElement('div');
+            modalContent.style.cssText = `
+                background: var(--card-bg);
+                padding: 1.5rem;
+                border-radius: 12px;
+                box-shadow: var(--shadow-lg);
+                width: 95%;
+                max-width: 1200px;
+                max-height: 95%;
+                position: relative;
+                transform: scale(0.8);
+                transition: transform 0.3s ease;
+                text-align: center;
+            `;
+            
+            modalContent.innerHTML = `
+                <h2 style="margin-bottom: 1rem; color: var(--text-primary);">My Resume</h2>
+                <div style="width: 95%; max-width: 1100px; height: 75vh; margin-bottom: 2rem; border: 1px solid #ddd; border-radius: 8px; overflow: hidden;">
+                    <iframe src="/static/resume/Professional Minimalist CV Resume.pdf" width="100%" height="100%" style="border: none;">
+                        <p>Your browser does not support PDFs. 
+                        <a href="/static/resume/Professional Minimalist CV Resume.pdf" download="Carl_Cabrera_Resume.pdf">Download resume</a> instead.</p>
+                    </iframe>
+                </div>
+                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                    <button id="download-resume" style="
+                        background: var(--primary-color);
+                        color: white;
+                        border: none;
+                        padding: 0.75rem 1.5rem;
+                        border-radius: 8px;
+                        cursor: pointer;
+                        font-weight: 600;
+                        transition: all 0.3s ease;
+                    ">
+                        <i class="fas fa-download"></i> Download Resume
+                    </button>
+                    <button id="close-modal" style="
+                        background: var(--text-muted);
+                        color: white;
+                        border: none;
+                        padding: 0.75rem 1.5rem;
+                        border-radius: 8px;
+                        cursor: pointer;
+                        font-weight: 600;
+                        transition: all 0.3s ease;
+                    ">
+                        <i class="fas fa-times"></i> Close
+                    </button>
+                </div>
+            `;
+            
+            modalOverlay.appendChild(modalContent);
+            document.body.appendChild(modalOverlay);
+            
+            // Animate in
+            setTimeout(() => {
+                modalOverlay.style.opacity = '1';
+                modalContent.style.transform = 'scale(1)';
+            }, 10);
+            
+            // Close modal functions
+            const closeModal = () => {
+                modalOverlay.style.opacity = '0';
+                modalContent.style.transform = 'scale(0.8)';
+                setTimeout(() => {
+                    document.body.removeChild(modalOverlay);
+                }, 300);
+            };
+            
+            // Event listeners
+            document.getElementById('close-modal').addEventListener('click', closeModal);
+            document.getElementById('download-resume').addEventListener('click', () => {
+                // Try to download the new resume file
+                const link = document.createElement('a');
+                link.href = '/static/resume/Professional Minimalist CV Resume.pdf';
+                link.download = 'Carl_Cabrera_Resume.pdf';
+                link.click();
+                
+                showNotification('Resume download started!', 'success');
+            });
+            
+            modalOverlay.addEventListener('click', (e) => {
+                if (e.target === modalOverlay) {
+                    closeModal();
+                }
+            });
+            
+            // Close on Escape key
+            const handleEscape = (e) => {
+                if (e.key === 'Escape') {
+                    closeModal();
+                    document.removeEventListener('keydown', handleEscape);
+                }
+            };
+            document.addEventListener('keydown', handleEscape);
+        });
+    }
+});
