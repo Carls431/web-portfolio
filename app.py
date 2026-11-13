@@ -58,6 +58,18 @@ def get_projects():
             'image': 'wala.png',
             'github_link': 'https://github.com/Carls431/cleaning-service-website/tree/main/.windsurf/cleaning-web',
             'live_link': 'https://carls.pythonanywhere.com/'
+        },
+        {
+            'id': 5,
+            'title': 'ShopWave Email Template',
+            'category': 'HTML Email Marketing',
+            'description': 'Created a responsive promotional email template for monthly marketing campaigns. Features include table-based layout for email client compatibility, inline CSS, product showcase with discount badges, CTA buttons, and mobile-responsive design. Optimized for Outlook, Gmail, and Apple Mail.',
+            'technologies': ['HTML', 'CSS', 'Email Client Compatibility', 'Responsive Design', 'Table-based Layout'],
+            'year': '2024',
+            'company': 'Portfolio Project',
+            'image': 'shopwave-email.png',
+            'github_link': 'https://github.com/Carls431/shopwave-email',
+            'live_link': 'https://shopwave-email-n8j1uiafl-cral-cabreras-projects.vercel.app'
         }
     ]
     return jsonify(projects)
